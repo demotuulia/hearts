@@ -51,6 +51,7 @@ class testCards extends TestCase
     /**
      * Test shuffle
      *
+     * Because this makes the cards in random order we just check the amount
      */
     public function testShuffle() : void
     {
@@ -69,13 +70,12 @@ class testCards extends TestCase
      */
     public function testDeal() : void
     {
-        // Here we test without shuffling so that we kan check the content
         $cards = new cards();
+        $cards->shuffle();
         $playerIds = [34, 45, 37, 4];
         $deal = $cards->dealCards($playerIds);
 
-
-        // Check that eacho one have 7 cards
+        // Check that each one have 7 cards
         $counts = array_values(
                 array_map(
                     function ($items)

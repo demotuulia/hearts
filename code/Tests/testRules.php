@@ -132,6 +132,7 @@ class testRules extends TestCase
                 ],
                 'expectedResult' => false
             ],
+
             [
                 'label' => 'New deal is needed',
                 'playersData' => [
@@ -160,6 +161,7 @@ class testRules extends TestCase
         ];
 
         $rules = new rules();
+
         foreach ($useCases as $case) {
             // Set players
             $players = [];
@@ -173,11 +175,7 @@ class testRules extends TestCase
                 $rules->isNewDeal($players),
                 'Case ' . $case['label']
             );
-
         }
-
-
-
     }
 
 

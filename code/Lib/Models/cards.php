@@ -69,9 +69,10 @@ final class cards {
      * Get card in the stack by  index in html format
      *
      * @param int $index
+     * @param bool $html
      * @return string
      */
-    public function getCardByIndex(int $index, $html = false) : string
+    public function getCardByIndex(int $index,bool $html = false) : string
     {
         $code =  $this->cardDeck[$index];
         if ($html) {
@@ -125,7 +126,6 @@ final class cards {
        foreach ($codes as $code) {
            $htmlCodes[$code] =  $this->getHtmlSymbol($code);
        }
-
        return $htmlCodes;
     }
 
@@ -165,7 +165,6 @@ final class cards {
             $deal[$playerIds[$playerIndex]] = ['codes' =>  $this->getHtmlSymbols($slice)];
             $playerIndex ++;
         }
-
         return $deal;
     }
 

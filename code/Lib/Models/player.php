@@ -148,16 +148,16 @@ final class player {
     */
     public static function jsonEncode(array $players) : string
     {
-            $playersArr = [];
-            foreach ($players as $player) {
-                $playersArr[] = [
-                    'id' => $player->getId() ,
-                    'name' => $player->getName(),
-                    'score' => $player->getScore(),
-                    'cards' => $player->getCards(),
-                ];
-            }
-            return json_encode($playersArr);
+        $playersArr = [];
+        foreach ($players as $player) {
+            $playersArr[] = [
+                'id' => $player->getId() ,
+                'name' => $player->getName(),
+                'score' => $player->getScore(),
+                'cards' => $player->getCards(),
+            ];
+        }
+        return json_encode($playersArr);
     }
 
 

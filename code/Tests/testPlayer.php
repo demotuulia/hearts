@@ -46,7 +46,8 @@ class testPlayer extends TestCase
         foreach ($playersData as $player) {
             $players[$player['id']] = new player($player['id'], $player['name']);
         }
-        // one player to test
+
+        // Set one player to test
         $testPlayer = $players[12];
 
         // Deal the cards
@@ -66,7 +67,6 @@ class testPlayer extends TestCase
             'HEART_12' => '&hearts;12',
             'HEART_13' => '&hearts;K',
         ];
-
         $this->assertEquals($expectedCards, $testPlayer->getCards() , 'Problem deal cards');
 
         //

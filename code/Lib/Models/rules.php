@@ -99,8 +99,8 @@ final class rules {
             $this->cleanUpTable();
         }
         $this->cardsOnTable[] = [
-                'playerId' => $playerId,
-                'cardCode' => $cardCode
+            'playerId' => $playerId,
+            'cardCode' => $cardCode
         ];
     }
 
@@ -150,16 +150,13 @@ final class rules {
             )
         );
 
-        /**
-         * Case: player puts a card which does not match the start card
-         *
-         * Rule: he must not have matching cards in his hand
-         */
+        // Case: player puts a card which does not match the start card
+        // Rule: he must not have matching cards in his hand
         if ($startCardSymbol != $playerCardSymbol) {
-                // Check if player as a matching symbol with the start card in is hand
-                if (is_numeric(array_search($startCardSymbol, $symbolsInHand))) {
-                    return false;
-                }
+            // Check if player as a matching symbol with the start card in is hand
+            if (is_numeric(array_search($startCardSymbol, $symbolsInHand))) {
+                return false;
+            }
         }
         return true;
     }
@@ -198,7 +195,6 @@ final class rules {
                 $looserId = $card['playerId'];
             }
         }
-
         return $looserId;
     }
 
@@ -350,7 +346,6 @@ final class rules {
                 return ($aScore > $bScore) ? -1 : 1;
             }
         );
-
         return $players;
     }
 }
