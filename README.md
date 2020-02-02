@@ -6,11 +6,11 @@ Hier is mijn code voor de hartenjagen spel.
 
 
 Klassen:<br>
-code/Lib/Models/cards.php<br>	
-code/Lib/Models/player.php<br>	
-code/Lib/Models/rules.php<br>
+https://github.com/demotuulia/hearts/blob/master/code/Lib/Models/cards.php<br>	
+https://github.com/demotuulia/hearts/blob/master/code/Lib/Models/player.php<br>	
+https://github.com/demotuulia/hearts/blob/master/code/Lib/Models/rules.php<br>
 
 Tests: <br>
-code/Tests/testCards.php<br>
-code/Tests/testPlayer.php<br>
-code/Tests/testRules.php<br>
+https://github.com/demotuulia/hearts/blob/master/code/Tests/testCards.php<br>
+https://github.com/demotuulia/hearts/blob/master/code/Tests/testPlayer.php<br>
+https://github.com/demotuulia/hearts/blob/master/code/Tests/testRules.php<br>
